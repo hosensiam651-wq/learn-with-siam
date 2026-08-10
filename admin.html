@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="admin">
+
+<h1 class="title">⚙️ Admin Panel</h1>
+
+<input
+type="text"
+id="courseName"
+placeholder="Course Name">
+
+<input
+type="number"
+id="courseOriginalPrice"
+placeholder="Original Price (আগের দাম, optional)">
+
+<input
+type="number"
+id="coursePrice"
+placeholder="Final / Discounted Price (৳)">
+
+<input
+type="url"
+id="courseImage"
+placeholder="Course Image URL">
+
+<input
+type="number"
+id="courseStudents"
+placeholder="Students Enrolled (optional)">
+
+<button id="addCourse">
+Add Course
+</button>
+
+<p id="adminMsg" class="auth-error"></p>
+
+<hr>
+
+<button id="seedBtn" class="seed-btn">
+🌱 আগের ৫টা কোর্স আবার যোগ করো (ছবিসহ)
+</button>
+
+<hr>
+
+<h2>Course List</h2>
+
+<div id="courseList"></div>
+
+<br>
+
+<a href="new.html" class="btn">
+⬅ Back Home
+</a>
+
+</section>
+
+<!-- Firebase SDK -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.16.0/firebase-app-compat.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.16.0/firebase-auth-compat.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.16.0/firebase-firestore-compat.min.js"></script>
+<script src="firebase-config.js"></script>
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>
+

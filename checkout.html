@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout - Learn With Siam</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="checkout">
+
+<h1 class="title">Checkout</h1>
+
+<form id="checkoutForm">
+
+<input type="text"
+id="name"
+placeholder="Full Name"
+required>
+
+<input type="email"
+id="email"
+placeholder="Email Address"
+required>
+
+<input type="tel"
+id="phone"
+placeholder="Phone Number"
+required>
+
+<textarea
+id="address"
+placeholder="Your Address"
+required></textarea>
+
+
+
+
+<h3 class="payment-heading">Select Payment Method</h3>
+
+<select id="paymentValue" name="payment" class="payment-select-box">
+    <option value="bKash">bKash</option>
+    <option value="Nagad">Nagad</option>
+    <option value="Rocket">Rocket</option>
+    <option value="Card">Debit / Credit Card</option>
+</select>
+
+<input
+type="text"
+id="coupon"
+placeholder="Coupon Code (Optional)">
+
+
+<button type="submit">
+
+Place Order
+
+</button>
+
+</form>
+
+</section>
+
+<!-- Firebase SDK -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.16.0/firebase-app-compat.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.16.0/firebase-auth-compat.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.16.0/firebase-firestore-compat.min.js"></script>
+<script src="firebase-config.js"></script>
+
+<script src="checkout.js"></script>
+
+</body>
+
+</html>

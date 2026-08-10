@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn With Siam</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+<header>
+
+
+<!-- Navbar -->
+    <nav class="navbar">
+
+        <!-- Logo -->
+        <div class="logo">
+            <img src="logo.png" alt="Learn With Siam">
+        </div>
+
+        <!-- Desktop Nav Links -->
+        <ul class="navbar-links">
+            <li><a href="#" class="nav-link active-link">Home</a></li>
+            <li><a href="#courses" class="nav-link">Courses</a></li>
+            <li><a href="#achievement" class="nav-link">Achievements</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <!-- Right Side -->
+        <div class="nav-right">
+
+            <a href="cart.html" class="navbar-cart" aria-label="Cart">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/><path d="M3 4h2l2.4 11.5a2 2 0 0 0 2 1.5h6.6a2 2 0 0 0 2-1.6L20 8H6"/></svg>
+                <span class="cart-badge" id="cartCountDesktop">0</span>
+            </a>
+
+            <button id="loginBtn">LOGIN</button>
+            <button id="logoutBtn" style="display:none;">Logout</button>
+
+            <div class="menu-icon" id="menuBtn">
+                ☰
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Banner -->
+
+<div class="banner">
+    <img src="banner.png" alt="Learn With Siam Banner">
+</div>
+
+
+<!-- Explore Courses CTA -->
+<section class="explore-cta">
+    <a href="#courses" class="explore-cta-btn">
+        Explore Courses
+        <span>→</span>
+    </a>
+</section>
+
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="menu">
+
+        <div class="close-icon" id="closeBtn">
+            ✖
+        </div>
+
+        <div class="mobile-menu-brand">Learn With Siam</div>
+
+        <nav class="mobile-menu-links">
+
+            <a href="#">
+                <svg class="mi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+                <span>Home</span>
+            </a>
+
+            <a href="#courses">
+                <svg class="mi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 5.5v15"/></svg>
+                <span>Courses</span>
+            </a>
+
+            <a href="#achievement">
+                <svg class="mi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 4h8v4a4 4 0 0 1-8 0z"/><path d="M8 5H5a3 3 0 0 0 3 5"/><path d="M16 5h3a3 3 0 0 1-3 5"/><path d="M12 12v4"/><path d="M9 20h6"/><path d="M10 16h4l1 4H9z"/></svg>
+                <span>Achievement</span>
+            </a>
+
+            <a href="#about">
+                <svg class="mi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 11v6"/><circle cx="12" cy="8" r="0.6" fill="currentColor" stroke="none"/></svg>
+                <span>About</span>
+            </a>
+
+            <a href="#contact">
+                <svg class="mi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+                <span>Contact</span>
+            </a>
+
+            <a href="dashboard.html">
+                <svg class="mi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10"/><path d="M12 20V4"/><path d="M20 20v-7"/><path d="M3 20h18"/></svg>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="cart.html">
+                <svg class="mi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="20" r="1"/><circle cx="17" cy="20" r="1"/><path d="M3 4h2l2.4 11.5a2 2 0 0 0 2 1.5h6.6a2 2 0 0 0 2-1.6L20 8H6"/></svg>
+                <span>Cart (<span id="cartCount">0</span>)</span>
+            </a>
+
+
+                    <a href="admin.html" id="adminMenuLink" class="admin-hidden">
+                <svg class="mi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.6V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9c.2.7.8 1.2 1.6 1.2H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+                <span>Admin</span>
+            </a>
+
+        </nav>
+
+        <button id="themeBtn">
+            <svg class="mi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+            <span>Dark Mode</span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= Search ================= -->
+
+
+<section id="courses">
+
+<h2 class="title">Our Courses</h2>
+
+<div class="course-search" id="courseSearch">
+
+    <svg
+        class="search-icon"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+    >
+        <circle cx="11" cy="11" r="7"></circle>
+        <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+    </svg>
+
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Search courses, skills or topics..."
+        autocomplete="off"
+    >
+
+</div>
+
+<p id="noCoursesFound" class="no-courses-found">
+    No courses found
+</p>
+
+
+<div class="course-container" id="courseContainer">
+<p class="loading-courses">⏳ Loading courses...</p>
+</div>
+
+</section>
+
+<section id="achievement">
+
+<h2 class="title">Achievements</h2>
+
+<div class="achievement-box">
+
+<div>
+<h1>5000+</h1>
+<p>Students</p>
+</div>
+
+<div>
+<h1>5</h1>
+<p>Premium Courses</p>
+</div>
+
+<div>
+<h1>98%</h1>
+<p>Success Rate</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">About Us</h2>
+
+<p class="about-text">
+
+Learn With Siam is an online learning platform where students can improve their skills through high-quality video courses and practical learning.
+
+</p>
+
+</section>
+
+
+<!-- =========================
+     PROFESSIONAL CONTACT
+========================= -->
+
+<section id="contact" class="lws-contact">
+
+    <div class="lws-contact-inner">
+
+        <div class="lws-contact-heading">
+            <span class="lws-section-label">GET IN TOUCH</span>
+
+            <h2>Contact Us</h2>
+
+            <p>
+                আপনার যেকোনো প্রশ্ন বা সহযোগিতার জন্য
+                আমাদের সাথে যোগাযোগ করুন।
+            </p>
+        </div>
+
+
+        <!-- Contact Cards -->
+
+        <div class="lws-contact-cards">
+
+            <!-- Email -->
+            <a
+                href="mailto:learnwithsiam@gmail.com"
+                class="lws-contact-card"
+            >
+
+                <div class="lws-contact-icon">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+
+                </div>
+
+                <div>
+                    <span class="lws-contact-card-title">
+                        Email Us
+                    </span>
+
+                    <strong>
+                        learnwithsiam@gmail.com
+                    </strong>
+                </div>
+
+            </a>
+
+
+            <!-- Phone -->
+            <a
+                href="tel:+8801700000000"
+                class="lws-contact-card"
+            >
+
+                <div class="lws-contact-icon">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+                        19.79 19.79 0 0 1-8.63-3.07
+                        19.5 19.5 0 0 1-6-6
+                        A19.79 19.79 0 0 1 2.12 4.18
+                        2 2 0 0 1 4.11 2h3
+                        a2 2 0 0 1 2 1.72
+                        12.84 12.84 0 0 0 .7 2.81
+                        2 2 0 0 1-.45 2.11L8.09 9.91
+                        a16 16 0 0 0 6 6l1.27-1.27
+                        a2 2 0 0 1 2.11-.45
+                        12.84 12.84 0 0 0 2.81.7
+                        A2 2 0 0 1 22 16.92z">
+                        </path>
+                    </svg>
+
+                </div>
+
+                <div>
+                    <span class="lws-contact-card-title">
+                        Call Us
+                    </span>
+
+                    <strong>
+                        +880 1700-000000
+                    </strong>
+                </div>
+
+            </a>
+
+
+            <!-- Location -->
+            <div class="lws-contact-card">
+
+                <div class="lws-contact-icon">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 21s7-6.1 7-12
+                        a7 7 0 1 0-14 0c0 5.9 7 12 7 12z">
+                        </path>
+
+                        <circle cx="12" cy="9" r="2.5"></circle>
+                    </svg>
+
+                </div>
+
+                <div>
+                    <span class="lws-contact-card-title">
+                        Location
+                    </span>
+
+                    <strong>
+                        Bangladesh
+                    </strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Contact CTA -->
+
+        <div class="lws-contact-cta">
+
+            <div>
+                <h3>শিখতে প্রস্তুত?</h3>
+
+                <p>
+                    আজ থেকেই আপনার দক্ষতা উন্নয়নের যাত্রা শুরু করুন।
+                </p>
+            </div>
+
+            <a href="#courses" class="lws-contact-cta-btn">
+                Explore Courses
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROFESSIONAL FOOTER
+========================= -->
+
+<footer class="footer lws-footer">
+
+    <div class="lws-footer-inner">
+
+
+        <!-- Footer Top -->
+
+        <div class="lws-footer-grid">
+
+
+            <!-- Brand -->
+
+            <div class="lws-footer-brand">
+
+                <h2>Learn With Siam</h2>
+
+                <p>
+                    দক্ষতা অর্জন করুন, নতুন কিছু শিখুন
+                    এবং নিজের ভবিষ্যৎ গড়ে তুলুন।
+                </p>
+
+                <span class="lws-footer-tagline">
+                    Learn Today, Lead Tomorrow.
+                </span>
+
+            </div>
+
+
+            <!-- Quick Links -->
+
+            <div class="lws-footer-column">
+
+                <h3>Quick Links</h3>
+
+                <a href="#home">Home</a>
+                <a href="#courses">Courses</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact Us</a>
+
+            </div>
+
+
+            <!-- Learning -->
+
+            <div class="lws-footer-column">
+
+                <h3>Learning</h3>
+
+                <a href="#courses">All Courses</a>
+                <a href="#courses">Skill Development</a>
+                <a href="#courses">Certificates</a>
+                <a href="dashboard.html">Student Dashboard</a>
+
+            </div>
+
+
+            <!-- Social -->
+
+            <div class="lws-footer-column">
+
+                <h3>Follow Us</h3>
+
+                <div class="lws-social">
+
+                    <!-- Facebook -->
+                    <a href="#" aria-label="Facebook">
+
+                        <svg viewBox="0 0 24 24">
+                            <path d="M14 8h3V4h-3
+                            c-3.3 0-5 1.7-5 5v3H6v4h3v8h4v-8h3.5l.5-4H13V9
+                            c0-.7.3-1 1-1z">
+                            </path>
+                        </svg>
+
+                    </a>
+
+
+                    <!-- YouTube -->
+                    <a href="#" aria-label="YouTube">
+
+                        <svg viewBox="0 0 24 24">
+                            <path d="M23.5 6.2
+                            a3 3 0 0 0-2.1-2.1
+                            C19.5 3.5 12 3.5 12 3.5
+                            s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2
+                            31.7 31.7 0 0 0 0 12
+                            a31.7 31.7 0 0 0 .5 5.8
+                            3 3 0 0 0 2.1 2.1
+                            c1.9.6 9.4.6 9.4.6
+                            s7.5 0 9.4-.6
+                            a3 3 0 0 0 2.1-2.1
+                            A31.7 31.7 0 0 0 24 12
+                            a31.7 31.7 0 0 0-.5-5.8z">
+                            </path>
+
+                            <polygon points="9.5,8 16,12 9.5,16">
+                            </polygon>
+                        </svg>
+
+                    </a>
+
+
+                    <!-- Instagram -->
+                    <a href="#" aria-label="Instagram">
+
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <circle cx="17.5" cy="6.5" r="1"></circle>
+                        </svg>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!-- Footer Bottom -->
+
+        <div class="lws-footer-bottom">
+
+            <p>
+                © 2026 Learn With Siam. All Rights Reserved.
+            </p>
+
+            <span>
+                Learn Today, Lead Tomorrow.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<div id="loginPopup" class="popup">
+
+    <div class="popup-content">
+
+        <span id="closePopup">&times;</span>
+
+        <h2>Login</h2>
+
+        <input type="email" id="loginEmail" placeholder="Enter Email">
+
+        <input type="password" id="loginPassword" placeholder="Enter Password">
+
+        <button id="submitLogin">Login</button>
+
+        <p id="loginError" class="auth-error"></p>
+
+        <!-- Register Option -->
+        <p class="register-link">
+            Don't have an account?
+
+            <button type="button" id="openRegisterPopup">
+                Create Account
+            </button>
+        </p>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     REGISTER POPUP
+========================= -->
+
+<div id="registerPopup" class="student-popup">
+
+    <div class="student-popup-content">
+
+        <span id="closeRegisterPopup" class="student-popup-close">
+            &times;
+        </span>
+
+        <h2>Create Student Account</h2>
+
+        <p class="register-subtitle">
+            Start your learning journey with Learn With Siam
+        </p>
+
+        <form id="registerForm">
+
+            <input
+                type="text"
+                id="registerName"
+                placeholder="Full Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="registerEmail"
+                placeholder="Email Address"
+                required
+            >
+
+            <input
+                type="password"
+                id="registerPassword"
+                placeholder="Password"
+                required
+            >
+
+            <input
+                type="password"
+                id="registerConfirmPassword"
+                placeholder="Confirm Password"
+                required
+            >
+
+            <button type="submit">
+                Create Account
+            </button>
+
+            <p id="registerError" class="auth-error"></p>
+
+        </form>
+
+        <p class="register-login-text">
+            Already have an account?
+
+            <button type="button" id="backToLogin">
+                Login
+            </button>
+        </p>
+
+    </div>
+
+</div>
+
+<!-- Firebase SDK -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.16.0/firebase-app-compat.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.16.0/firebase-auth-compat.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/12.16.0/firebase-firestore-compat.min.js"></script>
+<script src="firebase-config.js"></script>
+
+<script src="wb.js"></script>
+
+</body>
+</html>
+
